@@ -10,24 +10,8 @@ A USB 3.2 Gen1 to Gigabit Ethernet dongle based on the AX88179B.
 Step 1: First you need to compile the Time Stick module (driver). Either clone the entire repo and take it from there (skip to step 2) so use the following commands:
 ```
 cd
-mkdir TimeStick
+https://github.com/Time-Appliances-Project/TimeStick.git
 cd TimeStick
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/Makefile
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/Readme
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax88179_178a.c
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax88179_178a.h
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax88179a_772d.c
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax88179a_772d.h
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax88179a_ieee.c
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax88179_programmer.c
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax88279_programmer.c
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax88179a_programmer.c
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax_ioctl.h
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax_main.c
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax_main.h
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax_ptp.c
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/ax_ptp.h
-wget https://raw.githubusercontent.com/opencomputeproject/Time-Appliance-Project/refs/heads/master/Incubation/Hardware/TimeStick/DRV/axcmd.c
 make
 sudo make install
 ```
