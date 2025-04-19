@@ -10,7 +10,7 @@ A USB 3.2 Gen1 to Gigabit Ethernet dongle based on the AX88179B.
 Step 1: First you need to compile the Time Stick module (driver). Either clone the entire repo and take it from there (skip to step 2) so use the following commands:
 ```
 cd
-https://github.com/Time-Appliances-Project/TimeStick.git
+git clone https://github.com/Time-Appliances-Project/TimeStick.git
 cd TimeStick
 make
 sudo make install
