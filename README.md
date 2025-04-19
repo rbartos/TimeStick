@@ -11,7 +11,7 @@ Step 1: First you need to compile the Time Stick module (driver). Either clone t
 ```
 cd
 git clone https://github.com/Time-Appliances-Project/TimeStick.git
-cd TimeStick
+cd TimeStick/DRV
 make
 sudo make install
 ```
