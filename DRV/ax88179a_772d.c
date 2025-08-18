@@ -245,7 +245,8 @@ static int ax88179a_set_coalesce(struct net_device *netdev,
 
 #ifdef ENABLE_PTP_FUNC
 static int ax88179a_set_wol_get_ts_info
-(struct net_device *dev, struct ethtool_ts_info *info)
+//RB (struct net_device *dev, struct ethtool_ts_info *info)
+(struct net_device *dev, struct kernel_ethtool_ts_info *info)
 {
 	struct ax_device *axdev = (struct ax_device *)netdev_priv(dev);
 	struct ax_ptp_cfg *ptp_cfg = axdev->ptp_cfg;
@@ -298,8 +299,8 @@ const struct ethtool_ops ax88179a_ethtool_ops = {
 	.get_wol	= ax_get_wol,
 	.set_wol	= ax_set_wol,
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 6, 0)
-	.get_eee	= ax88179a_get_eee,
-	.set_eee	= ax88179a_set_eee,
+	//RB .get_eee	= ax88179a_get_eee,
+	//RB .set_eee	= ax88179a_set_eee,
 #endif
 	.get_coalesce	= ax88179a_get_coalesce,
 	.set_coalesce	= ax88179a_set_coalesce,
