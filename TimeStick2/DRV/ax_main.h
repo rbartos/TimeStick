@@ -487,10 +487,10 @@ struct ax_device {
 	u8 int_link_info;
 	u8 int_link_chg;
 
-#ifdef ENABLE_PTP_FUNC
+//RB #ifdef ENABLE_PTP_FUNC
 	struct ax_ptp_cfg *ptp_cfg;
 	struct sk_buff_head tx_timestamp;
-#endif
+//RB #endif
 #ifdef ENABLE_MACSEC_FUNC
 	struct ax_macsec_cfg *macsec_cfg;
 #endif
@@ -535,11 +535,11 @@ struct driver_info {
 	int	(*runtime_suspend)(struct ax_device *axdev);
 	int	(*runtime_resume)(struct ax_device *axdev);
 
-#ifdef ENABLE_PTP_FUNC
+//RB #ifdef ENABLE_PTP_FUNC
 	int (*ptp_pps_ctrl)(struct ax_device *axdev, u8 enable);
 	int	(*ptp_init)(struct ax_device *axdev);
 	void	(*ptp_remove)(struct ax_device *axdev);
-#endif
+//RB #endif
 
 	unsigned long napi_weight;
 	size_t	buf_rx_size;
