@@ -123,7 +123,7 @@
 #define PHY_10M_STS			0x16
 	#define LINK_10M_OK		0x40
 
-#ifdef ENABLE_AX88279
+//RB #ifdef ENABLE_AX88279
 #define AX_PBUS_A32			0x11
 
 #define AX_PBUS_REG_BASE_ADDR_HI	0x0013
@@ -143,7 +143,7 @@
 	#define AX_AES_CLK_SELECT_DIVIDE	0x080000
 	#define AX_XGMAC_TX_CLK_EN		0x100000
 	#define AX_XGMAC_RX_CLK_EN		0x200000
-#endif
+//RB #endif
 
 struct _179a_rx_pkt_header {
 #ifdef __BIG_ENDIAN
