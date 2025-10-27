@@ -76,6 +76,9 @@ else
 MDIR	= kernel/drivers/net/usb
 endif
 
+# to make it compile under Fedora Core 42 which ignores EXTRA_CFLAGS
+ccflags-y += $(EXTRA_CFLAGS)
+
 all:
 	make -C $(KDIR) M=$(PWD) modules
 	$(CC) $(TOOL_EXTRA_CFLAGS) ax88179_programmer.c -o ax88179_programmer
