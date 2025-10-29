@@ -298,8 +298,8 @@ const struct ethtool_ops ax88179a_ethtool_ops = {
 	.get_wol	= ax_get_wol,
 	.set_wol	= ax_set_wol,
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 6, 0)
-	.get_eee	= ax88179a_get_eee,
-	.set_eee	= ax88179a_set_eee,
+	.get_eee	= (int (*)(struct net_device *, struct ethtool_keee *)) ax88179a_get_eee,
+	.set_eee	= (int (*)(struct net_device *, struct ethtool_keee *)) ax88179a_set_eee,
 #endif
 	.get_coalesce	= ax88179a_get_coalesce,
 	.set_coalesce	= ax88179a_set_coalesce,
@@ -311,7 +311,7 @@ const struct ethtool_ops ax88179a_ethtool_ops = {
 	.get_regs_len	= ax_get_regs_len,
 	.get_regs	= ax_get_regs,
 #ifdef ENABLE_PTP_FUNC
-	.get_ts_info	= ax88179a_set_wol_get_ts_info,
+	.get_ts_info	= (int (*)(struct net_device *, struct kernel_ethtool_ts_info *)) ax88179a_set_wol_get_ts_info,
 #else
 	.get_ts_info	= ethtool_op_get_ts_info,
 #endif
@@ -345,7 +345,7 @@ const struct ethtool_ops ax88279_ethtool_ops = {
 	.get_regs_len	= ax_get_regs_len,
 	.get_regs	= ax_get_regs,
 #ifdef ENABLE_PTP_FUNC
-	.get_ts_info	= ax88179a_set_wol_get_ts_info,
+	.get_ts_info	= (int (*)(struct net_device *, struct kernel_ethtool_ts_info *)) ax88179a_set_wol_get_ts_info,
 #else
 	.get_ts_info	= ethtool_op_get_ts_info,
 #endif
