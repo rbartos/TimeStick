@@ -1,0 +1,10 @@
+*.o
+*.ko
+*.cmd
+*_programmer
+*_ieee
+Module.symvers
+axcmd
+modules.order
+ax_usb_nic.mod
+ax_usb_nic.mod.c
